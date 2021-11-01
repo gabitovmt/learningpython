@@ -1,0 +1,11 @@
+import fileinput
+
+
+def main():
+    for line in fileinput.input(openhook=fileinput.hook_encoded("utf-8")):
+        if fileinput.isfirstline():
+            print('<start of file {0}>'.format(fileinput.filename()))
+        print(line, end='')
+
+
+main()

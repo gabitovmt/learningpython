@@ -5,6 +5,7 @@ print(packed)
 file = open('data.bin', 'wb')
 print(file.write(packed))
 file.close()
+print('-' * 10)
 
 data = open('data.bin', 'rb').read()
 print(data)

@@ -1,5 +1,4 @@
 # Методы строковых и байтовых объектов
-import string
 
 print('s.join()')
 print(''.join(str(x) for x in range(7)))  # 0123456

@@ -34,3 +34,12 @@ print(L)
 # ['spam', 'ham']
 print(L.count('spam'))  # Кол-во вхождений
 # 1
+
+print('\nОператор del')
+L = ['spam', 'eggs', 'ham', 'toast']
+del L[0]  # Удаление одного элемента
+print(L)
+# ['eggs', 'ham', 'toast']
+del L[1:]  # Удаление целой секции
+print(L)
+# ['eggs']

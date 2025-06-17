@@ -15,7 +15,7 @@ print(myfile.readline(), end='')
 print(myfile.readline())
 # - пустая строка: конец файла
 
-print(open('myfile.txt').read()) # Чтение сразу всего файла в строковый объект
+print(open('myfile.txt').read())  # Чтение сразу всего файла в строковый объект
 
-for line in open('myfile.txt'): # Использование файловых итераторов
+for line in open('myfile.txt'):  # Использование файловых итераторов
     print(line, end='')

@@ -19,6 +19,7 @@ WHITE = (254, 254, 254)
 Объекты
 """
 
+
 class Player(pygame.sprite.Sprite):
     """
     Создание главного персонажа
@@ -29,9 +30,12 @@ class Player(pygame.sprite.Sprite):
         self.images = []
         for i in range(0, 8):
             img = pygame.image.load(f'images/walk-{i}.png').convert()
+            img.convert_alpha()  # Оптимизация альфа-диапазона
+            # Все пиксели, цвет которых совпадает с переданным в set_colorkey() значением, станут прозрачными
+            img.set_colorkey(0)
             self.images.append(img)
-            self.image = self.images[0]
-            self.rect = self.image.get_rect()
+        self.image = self.images[0]
+        self.rect = self.image.get_rect()
 
 
 """

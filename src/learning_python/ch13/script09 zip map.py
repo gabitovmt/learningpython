@@ -30,3 +30,23 @@ print(list(map(lambda x, y: x+y, S1, S2))) # Усекает по длине ко
 
 print(list(map(ord, 'spam')))
 # [115, 112, 97, 109]
+
+# Создание словарей с помощью zip
+keys = ['spam', 'eggs', 'toast']
+vals = [1, 3, 5]
+print(list(zip(keys, vals)))
+# [('spam', 1), ('eggs', 3), ('toast', 5)]
+D = {}
+for k, v in zip(keys, vals):
+    D[k] = v
+print(D)
+# {'spam': 1, 'eggs': 3, 'toast': 5}
+
+# 2.2+
+D = dict(zip(keys, vals))
+print(D)
+# {'spam': 1, 'eggs': 3, 'toast': 5}
+
+# Списковые включения
+print({k: v for k, v in zip(keys, vals)})
+# {'spam': 1, 'eggs': 3, 'toast': 5}

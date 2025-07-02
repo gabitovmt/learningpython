@@ -54,3 +54,15 @@ print()
 for c in S[::2]: print(c, end=' ')
 # a c e g i k
 print()
+
+# Изменение списков
+L = [1, 2, 3, 4, 5]
+for x in L:  # Код работать не будет
+    x += 1
+print(L)
+# [1, 2, 3, 4, 5]
+
+for i in range(len(L)):
+    L[i] += 1
+print(L)
+# [2, 3, 4, 5, 6]

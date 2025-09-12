@@ -23,3 +23,9 @@ values = struct.unpack('>i4sh', data)
 # Преобразовать в объекты Python
 print(values)
 # (7, b'spam', 8)
+
+# Диспетчеры контекстов для файлов
+print('\n' + ' file context '.center(80, '-'))
+with open('myfile.txt') as myfile:
+    for line in myfile:
+        print(line, end='')

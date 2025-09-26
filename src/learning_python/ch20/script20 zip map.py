@@ -125,9 +125,21 @@ print(mymapPad(S1, S2, pad=99))
 # [('a', 'x'), ('b', 'y'), ('c', 'z'), (99, '1'), (99, '2'), (99, '3')]
 
 # Применение генераторов
+print('-' * 80)
 def myzip(*seqs):
     minlen = min(len(S) for S in seqs)
     return (tuple(S[i] for S in seqs) for i in range(minlen))
 
 print(list(myzip(S1, S2)))
+# [('a', 'x'), ('b', 'y'), ('c', 'z')]
+
+
+def myzip(*args):
+    # В Python 3.X требуется list(), т.к. map - одноразовый итератор.
+    # В Python 3.7+ этот код не рабочий. StopIteration внутри генератора возбуждает ошибку RuntimeError.
+    iters = list(map(iter, args))
+    while iters:
+        yield tuple([next(i) for i in iters])
+
+# print(list(myzip(S1, S2)))
 # [('a', 'x'), ('b', 'y'), ('c', 'z')]

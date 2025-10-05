@@ -1,0 +1,70 @@
+Измерение времени выполнения итераций и версий Python с помощью модуля timeit
+
+timeit.repeat(stmt='pass', setup='pass', timer=<default timer>, repeat=5, number=1000000, globals=None)
+stmt - код, который необходимо запустить. Строка | вызывающий объект.
+setup - код настройки. Строка | вызывающий код.
+number - кол-во циклов.
+repeat - кол-во прогонов.
+Возвращает список лучшее время в секундах каждого прогона.
+
+
+Интерактивное использование и вызова API-интерфейса
+
+(.venv) PS C:\devprograms\python> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import timeit
+>>> min(timeit.repeat(stmt="[x ** 2 for x in range(1000)]", number=1000, repeat=5))
+0.027535400000033405
+
+(.venv) PS C:\devprograms\python> py -2
+Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import timeit
+>>> min(timeit.repeat(stmt="[x ** 2 for x in range(1000)]", number=1000, repeat=5))
+0.02104969999999999
+
+(.venv) PS C:\devprograms\python> pypy3.11\pypy.exe
+Python 3.11.13 (413c9b7f57f5, Jul 03 2025, 18:04:37)
+[PyPy 7.3.20 with MSC v.1941 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>> import timeit
+>>>> min(timeit.repeat(stmt="[x ** 2 for x in range(1000)]", number=1000, repeat=5))
+0.0012996999998904357
+
+
+Использование в командной строке
+
+Обрати внимание, время указывается лучшее за один цикл. sec - секунд, msec - миллисекунд, usec - микросекунд.
+
+(.venv) PS C:\devprograms\python> py -3 -m timeit -n 1000 -r 5 "[x ** 2 for x in range(1000)]"
+1000 loops, best of 5: 27.5 usec per loop
+
+(.venv) PS C:\devprograms\python> py -2 -m timeit -n 1000 -r 5 "[x ** 2 for x in range(1000)]"
+1000 loops, best of 5: 20.7 usec per loop
+
+(.venv) PS C:\devprograms\python> pypy3.11\pypy -m timeit -n 1000 -r 5 "[x ** 2 for x in range(1000)]"
+WARNING: timeit is a very unreliable tool. use pyperf or something else for real measurements
+pypy.exe -m pip install pyperf
+pypy.exe -m pyperf timeit -n '1000' -r '5' '[x ** 2 for x in range(1000)]'
+------------------------------------------------------------
+1000 loops, average of 5: 1.4 +- 0.637 usec per loop (using standard deviation)
+
+
+Использование time.clock
+
+time.clock был удалён в 3.8. Поэтому параметр -с в timeit не будет работать.
+
+(.venv) PS C:\devprograms\python> py -3 -m timeit -n 1000 -r 5 -c "[x ** 2 for x in range(1000)]"
+option -c not recognized
+use -h/--help for command line help
+
+(.venv) PS C:\devprograms\python> py -2 -m timeit -n 1000 -r 5 -c "[x ** 2 for x in range(1000)]"
+1000 loops, best of 5: 20.7 usec per loop
+
+(.venv) PS C:\devprograms\python> pypy3.11\pypy -m timeit -n 1000 -r 5 -c "[x ** 2 for x in range(1000)]"
+WARNING: timeit is a very unreliable tool. use pyperf or something else for real measurements
+pypy.exe -m pip install pyperf
+pypy.exe -m pyperf timeit -n '1000' -r '5' -c '[x ** 2 for x in range(1000)]'
+------------------------------------------------------------
+1000 loops, average of 5: 1.77 +- 0.778 usec per loop (using standard deviation)

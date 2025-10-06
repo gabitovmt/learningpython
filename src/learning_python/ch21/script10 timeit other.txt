@@ -1,0 +1,9 @@
+Параметр -s - setup, настройка теста
+
+(venv) PS C:\devprograms\python> py -3 -m timeit -n 1000 -r 3 "L = [1,2,3,4,5]" "M = [x + 1 for x in L]"
+1000 loops, best of 3: 256 nsec per loop
+
+(venv) PS C:\devprograms\python> py -3 -m timeit -n 1000 -r 3 -s "L = [1,2,3,4,5]" "M = [x + 1 for x in L]"
+1000 loops, best of 3: 203 nsec per loop
+
+

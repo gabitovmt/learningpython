@@ -1,0 +1,14 @@
+Оценочные испытания. Чтение файлов
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch21> py -3 -m timeit -n 1000 -r 5 "f=open('C:/devprograms/python/Python313/Lib/pdb.py')" "for line in f: x=line" "f.close()"
+1000 loops, best of 5: 862 usec per loop
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch21> C:\devprograms\python\pypy3.11\pypy -m timeit -n 1000 -r 5 "f=open('C:/devprograms/python/Python313/Lib/pdb.py')" "for line in f: x=line" "f.close()"
+WARNING: timeit is a very unreliable tool. use pyperf or something else for real measurements
+pypy.exe -m pip install pyperf
+pypy.exe -m pyperf timeit -n '1000' -r '5' "f=open('C:/devprograms/python/Python313/Lib/pdb.py')" 'for line in f: x=line' 'f.close()'
+------------------------------------------------------------
+1000 loops, average of 5: 763 +- 36.4 usec per loop (using standard deviation)
+
+В книге говорилось, что PyPy проигрывает (CPython 3.7 vs PyPy 1.9).
+Здесь PyPy выиграл (CPython 3.13 vs PyPy 3.11-v7.3.20)

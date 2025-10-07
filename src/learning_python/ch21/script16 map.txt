@@ -1,0 +1,26 @@
+Оценочные испытания. Выигрыш map и редкий проигрыш PyPy
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch21> py -3 script15_pybench_cases2.py
+3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)]
+0.5422 ["[ord(x) for x in 'spam' * 2500]"]
+0.9434 ["res=[]\nfor x in 'spam' * 2500: res.append(ord(x))"]
+0.2084 ["list(map(ord, 'spam' * 2500))"]
+0.7399 ["list(ord(x) for x in 'spam' * 2500)"]
+0.0884 ['{x ** 2 for x in range(1000)}']
+0.1325 ['s=set()\nfor x in range(1000): s.add(x ** 2)']
+0.1000 ['{x: x ** 2 for x in range(1000)}']
+0.1099 ['d={}\nfor x in range(1000): d[x] = x ** 2']
+0.0000 ['import sys\nsys.set_int_max_str_digits(400000)\nlen(str(2**1_000))']
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch21> C:\devprograms\python\pypy3.11\pypy .\script15_pybench_cases2.py
+3.11.13 (413c9b7f57f5, Jul 03 2025, 18:04:37)
+[PyPy 7.3.20 with MSC v.1941 64 bit (AMD64)]
+0.0649 ["[ord(x) for x in 'spam' * 2500]"]
+0.1108 ["res=[]\nfor x in 'spam' * 2500: res.append(ord(x))"]
+0.0585 ["list(map(ord, 'spam' * 2500))"]
+0.2200 ["list(ord(x) for x in 'spam' * 2500)"]
+0.0265 ['{x ** 2 for x in range(1000)}']
+0.0257 ['s=set()\nfor x in range(1000): s.add(x ** 2)']
+0.0259 ['{x: x ** 2 for x in range(1000)}']
+0.0262 ['d={}\nfor x in range(1000): d[x] = x ** 2']
+0.0001 ['import sys\nsys.set_int_max_str_digits(400000)\nlen(str(2**1_000))']

@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 pybench.py: тестирует скорость одной и более версий Python на наборе простых эталонных тестов в виде строк кода.
 Функция runner допускает разнообразные операторы в stmts. Сама система выполняется в Python 2.X и 3.X и может
@@ -33,7 +34,7 @@ def runner(stmts, pythons=None, tracecmd=False):
     print(sys.version)
     for (number, repeat, stmt) in stmts:
         number = number or defnum
-        repeat = repeat or defrep # 0 = стандартное значение
+        repeat = repeat or defrep  # 0 = стандартное значение
         if not pythons:
             # Запустить оператор stmt в этой версии Python: вызов API-интерфейса.
             # Нет необходимости разделять строки или помещать в кавычки.

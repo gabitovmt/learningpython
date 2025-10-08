@@ -1,0 +1,10 @@
+Влияние вызовов функций.
+map выигрывает (в CPython 3.13 тесты показали нет), если в альтернативных версиях
+должна применяться любая функция.
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch21> py -3 script18_pybench_cases3.py
+3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)]
+0.4609 ["def f(x): return x\n[f(x) for x in 'spam' * 2500]"]
+0.9124 ["def f(x): return x\nres=[]\nfor x in 'spam' * 2500: res.append(f(x))"]
+0.4821 ["def f(x): return x\nlist(map(f, 'spam' * 2500))"]
+0.7702 ["def f(x): return x\nlist(f(x) for x in 'spam' * 2500)"]

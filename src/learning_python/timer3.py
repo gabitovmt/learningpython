@@ -4,7 +4,7 @@
 Python 3.8+.
 """
 
-import time, sys
+import time
 
 
 def total(func, *pargs, _reps=1000, **kargs):

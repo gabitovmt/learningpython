@@ -1,0 +1,44 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22> dir
+
+    Каталог: D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12.10.2025     13:22             21 script0.py
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22> py -2
+Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import script0
+hello world
+>>> ^Z
+
+    Каталог: D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12.10.2025     13:22             21 script0.py
+-a----        12.10.2025     13:23            118 script0.pyc
+-a----        12.10.2025     13:24            636 script01.txt
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import script0
+hello world
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22> dir
+
+    Каталог: D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12.10.2025     13:24                __pycache__
+-a----        12.10.2025     13:22             21 script0.py
+-a----        12.10.2025     13:23            118 script0.pyc
+-a----        12.10.2025     13:24           1347 script01.txt
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22> dir .\__pycache__\
+
+    Каталог: D:\Projects\PycharmProjects\learningpython\src\learning_python\ch22\__pycache__
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12.10.2025     13:24            216 script0.cpython-313.pyc

@@ -1,0 +1,26 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script08> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pkg.spam
+Traceback (most recent call last):
+  File "<python-input-0>", line 1, in <module>
+    import pkg.spam
+  File "D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script08\pkg\spam.py", line 1, in <module>
+    from . import eggs
+  File "D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script08\pkg\eggs.py", line 2, in <module>
+    from . import string
+ImportError: cannot import name 'string' from 'pkg' (D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script08\pkg\__init__.py)
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script08> py -2
+Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pkg.spam
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "pkg\spam.py", line 1, in <module>
+    from . import eggs
+  File "pkg\eggs.py", line 2, in <module>
+    from . import string
+ImportError: cannot import name string
+>>> ^Z

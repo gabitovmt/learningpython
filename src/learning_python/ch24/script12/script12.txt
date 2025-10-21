@@ -1,0 +1,20 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script12> py
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pkg.spam
+eggs
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script12> py pkg\main.py
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script12\pkg\main.py", line 1, in <module>
+    import spam
+  File "D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script12\pkg\spam.py", line 1, in <module>
+    from . import eggs
+ImportError: attempted relative import with no known parent package
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script12> py pkg\spam.py
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script12\pkg\spam.py", line 1, in <module>
+    from . import eggs
+ImportError: attempted relative import with no known parent package

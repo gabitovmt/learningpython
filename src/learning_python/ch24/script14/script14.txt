@@ -1,0 +1,16 @@
+Из .venv не работает. Использовал cmd
+
+D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script14>set PYTHONPATH=D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script14
+
+D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script14>python pkg\main.py
+eggs
+
+D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script14>python
+Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pkg.spam
+eggs
+>>> ^Z
+
+D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script14>py pkg\spam.py
+eggs

@@ -1,0 +1,23 @@
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch24\script15> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import dualpkg.m2
+>>> ^Z
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch24\script15> py -2
+Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import dualpkg.m2
+>>> ^Z
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch24\script15> py -3 dualpkg\m2.py
+Traceback (most recent call last):
+  File "C:\Projects\MyProjects\learningpython\src\learning_python\ch24\script15\dualpkg\m2.py", line 2, in <module>
+    from . import m1
+ImportError: attempted relative import with no known parent package
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch24\script15> py -2 dualpkg\m2.py
+Traceback (most recent call last):
+  File "dualpkg\m2.py", line 2, in <module>
+    from . import m1
+ValueError: Attempted relative import in non-package

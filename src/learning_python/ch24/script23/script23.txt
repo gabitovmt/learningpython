@@ -1,0 +1,8 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script23> $Env:PYTHONPATH="D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script23\ns4\dir1;D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script23\ns4\dir2"
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script23> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sub
+>>> sub
+<module 'sub' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script23\\ns4\\dir2\\sub\\__init__.py'>
+>>> ^Z

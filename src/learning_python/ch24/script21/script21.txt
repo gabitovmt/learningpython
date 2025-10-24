@@ -1,0 +1,39 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script21> $Env:PYTHONPATH=""
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script21> py -2
+Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ns2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named ns2
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script21> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ns2
+>>> ns2
+<module 'ns2' (namespace) from ['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script21\\ns2']>
+>>> ns2.__path__
+_NamespacePath(['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script21\\ns2'])
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script21> $Env:PYTHONPATH="D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script21\ns3\dir"
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script21> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ns2
+ns3\dir\ns2.py!
+>>> import sys
+>>> sys.path[:2]
+['', 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script21\\ns3\\dir']
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script21> py -2
+Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ns2
+ns3\dir\ns2.py!
+>>> ns2
+<module 'ns2' from 'D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script21\ns3\dir\ns2.py'>
+>>> ^Z

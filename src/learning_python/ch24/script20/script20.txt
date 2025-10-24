@@ -1,0 +1,42 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script20> $Env:PYTHONPATH="D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script20\dir1;D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script20\dir2"
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script20> py
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sub.lower.mod3
+dir2\sub\lower\mod3
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script20> py
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sub
+>>> import sub.mod2
+dir2\sub\mod2
+>>> import sub.lower.mod3
+dir2\sub\lower\mod3
+>>> sub.lower
+<module 'sub.lower' (namespace) from ['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script20\\dir2\\sub\\lower']>
+>>> sub.lower.__path__
+_NamespacePath(['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script20\\dir2\\sub\\lower'])
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script20> py
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sub.mod2
+dir2\sub\mod2
+>>> import sub.pkg
+dir1\sub\pkg\__init__.py
+>>> import sub.lower.mod3
+dir2\sub\lower\mod3
+>>> sub
+<module 'sub' (namespace) from ['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script20\\dir1\\sub', 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script20\\dir2\\sub']>
+>>> sub.mod2
+<module 'sub.mod2' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script20\\dir2\\sub\\mod2.py'>
+>>> sub.pkg
+<module 'sub.pkg' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script20\\dir1\\sub\\pkg\\__init__.py'>
+>>> sub.lower
+<module 'sub.lower' (namespace) from ['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script20\\dir2\\sub\\lower']>
+>>> sub.lower.mod3
+<module 'sub.lower.mod3' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script20\\dir2\\sub\\lower\\mod3.py'>
+>>> ^Z

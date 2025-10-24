@@ -1,0 +1,37 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script18> $Env:PYTHONPATH="D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script18\ns\dir1;D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script18\ns\dir2"
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script18> py
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sub
+>>> sub
+<module 'sub' (namespace) from ['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir1\\sub', 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir2\\sub']>
+>>> sub.__path__
+_NamespacePath(['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir1\\sub', 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir2\\sub'])
+>>> from sub import mod1
+dir1\sub\mod1
+>>> import sub.mod2
+dir2\sub\mod2
+>>> mod1
+<module 'sub.mod1' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir1\\sub\\mod1.py'>
+>>> sub.mod2
+<module 'sub.mod2' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir2\\sub\\mod2.py'>
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch24\script18> py
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sub.mod1
+dir1\sub\mod1
+>>> import sub.mod2
+dir2\sub\mod2
+>>> sub.mod1
+<module 'sub.mod1' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir1\\sub\\mod1.py'>
+>>> sub.mod2
+<module 'sub.mod2' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir2\\sub\\mod2.py'>
+>>> sub
+<module 'sub' (namespace) from ['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir1\\sub', 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir2\\sub']>
+>>> sub.__path__
+_NamespacePath(['D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir1\\sub', 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch24\\script18\\ns\\dir2\\sub'])
+>>> ^Z
+
+

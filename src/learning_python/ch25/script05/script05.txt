@@ -1,0 +1,61 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script05> py formats.py
+0
+1
+12
+123
+1,234
+12,345
+123,456
+1,234,567
+4,294,967,296
+1,267,650,600,228,229,401,496,703,205,376
+
+$             0.00 [0]
+$             1.00 [1]
+$            -1.00 [-1]
+$             1.23 [1.23]
+$             1.00 [1.0]
+$             1.20 [1.2]
+$             3.14 [3.14159]
+$            12.34 [12.34]
+$            12.34 [12.344]
+$            12.35 [12.345]
+$            12.35 [12.346]
+$ 4,294,967,296.00 [4294967296]
+$ 4,294,967,296.23 [4294967296.2345]
+$             1.23 [1.2345]
+$             1.20 [1.2]
+$             0.23 [0.2345]
+$            -1.23 [-1.2345]
+$            -1.20 [-1.2]
+$            -0.23 [-0.2345]
+$-4,294,967,296.00 [-4294967296]
+$-4,294,967,296.23 [-4294967296.2345]
+$1,267,650,600,228,229,401,496,703,205,376.00 [1267650600228229401496703205376]
+$-1,267,650,600,228,229,401,496,703,205,376.00 [-1267650600228229401496703205376]
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script05> py formats.py 999999999 0
+$999,999,999.00
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script05> py formats.py -999999999 0
+$-999,999,999.00
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script05> py formats.py 123456789012345 0
+$123,456,789,012,345.00
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script05> py formats.py -123456789012345 25
+$  -123,456,789,012,345.00
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script05> py formats.py 123.456 0
+$123.46
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script05> py formats.py -123.454 0
+$-123.45
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script05> py
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from formats import money, commas
+>>> money(123.456)
+'$123.46'
+>>> money(-9999999.99, 15)
+'$  -9,999,999.99'
+>>> X = 99_999_999_999_999_999_999
+>>> '%s (%s)' % (commas(X), X)
+'99,999,999,999,999,999,999 (99999999999999999999)'
+>>> ^Z

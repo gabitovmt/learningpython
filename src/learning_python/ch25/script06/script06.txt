@@ -1,0 +1,77 @@
+PowerShell
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06> $OutputEncoding = [System.Text.Encoding]::UTF8
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06> [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06> $Env:PYTHONIOENCODING='utf-8'
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06> py formats_currency.py > temp.txt
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06> Get-Content temp.txt
+$54,321.99 54,321.99
+£54,321.99 ¥54,321.99
+£54,321.99
+€54,321.99 €54,321.99
+¤54,321.99
+
+
+CMD
+
+(.venv) D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06>set PYTHONIOENCODING=utf-8
+(.venv) D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06>py formats_currency.py > temp.txt
+(.venv) D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06>chcp 65001
+Active code page: 65001
+(.venv) D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06>type temp.txt
+$54,321.99 54,321.99
+£54,321.99 ¥54,321.99
+£54,321.99
+€54,321.99 €54,321.99
+¤54,321.99
+
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06> py -2
+Python 2.7.18 (v2.7.18:8d21aa21f2, Apr 20 2020, 13:25:05) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print u'\xA5' + '1', '%s2' % u'\u00A3'
+¥1 £2
+>>> ^Z
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print(u'\xA5' + '1', '%s2' % u'\u00A3')
+¥1 £2
+>>> print('\xA5' + '1', '%s2' % '\u00A3')
+¥1 £2
+>>> ^Z
+
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script06> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import formats
+>>> help(formats)
+Help on module formats:
+
+NAME
+    formats
+
+DESCRIPTION
+    Файл: formats.py (Python 2.X и 3.X)
+    Разнообразные специализированные функции для форматирования строк с целью отображения.
+    Тестирование можно производить с помощью заготовленного теста или аргументов командной строки.
+
+FUNCTIONS
+    commas(N)
+        Форматирует положительное целое число N для отображения с запятыми, разделяющими группы цифр: "xxx,yyy,zzz".
+
+    money(N, numwidth=0, currency='$')
+        Форматирует число N для отображения с запятыми, 2 десятичными цифрами, ведущим символом $ и знаком, а также
+        необязательным дополнением:
+        "$ -xxx,yyy.zz".
+        numwidth=0 - отсутствие дополнения пробелами,
+        currency='' - опустить символ $
+        или символ не ASCII для других валют (например, фунт - u'\xa3' или u'\xa3').
+
+FILE
+    d:\projects\pycharmprojects\learningpython\src\learning_python\ch25\script06\formats.py
+
+
+>>> ^Z

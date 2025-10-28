@@ -1,0 +1,203 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script08> py mydir.py
+------------------------------------------------------------
+name: mydir file: D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script08\mydir.py
+------------------------------------------------------------
+00) __builtins__ <build-in name>
+01) __cached__ <build-in name>
+02) __doc__ <build-in name>
+03) __file__ <build-in name>
+04) __loader__ <build-in name>
+05) __name__ <build-in name>
+06) __package__ <build-in name>
+07) __spec__ <build-in name>
+08) listing <function listing at 0x000001D882D44D60>
+09) print_function _Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 1048576)
+10) sepchr -
+11) seplen 60
+------------------------------------------------------------
+mydir has 12 names
+------------------------------------------------------------
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script08> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mydir
+>>> import tkinter
+>>> mydir.listing(tkinter)
+------------------------------------------------------------
+name: tkinter file: C:\DevPrograms\Python\Python313\Lib\tkinter\__init__.py
+------------------------------------------------------------
+00) ACTIVE active
+01) ALL all
+02) ANCHOR anchor
+03) ARC arc
+04) BASELINE baseline
+05) BEVEL bevel
+06) BOTH both
+07) BOTTOM bottom
+08) BROWSE browse
+09) BUTT butt
+10) BaseWidget <class 'tkinter.BaseWidget'>
+11) BitmapImage <class 'tkinter.BitmapImage'>
+12) BooleanVar <class 'tkinter.BooleanVar'>
+13) Button <class 'tkinter.Button'>
+14) CASCADE cascade
+15) CENTER center
+16) CHAR char
+17) CHECKBUTTON checkbutton
+18) CHORD chord
+19) COMMAND command
+20) CURRENT current
+21) CallWrapper <class 'tkinter.CallWrapper'>
+22) Canvas <class 'tkinter.Canvas'>
+23) Checkbutton <class 'tkinter.Checkbutton'>
+24) DISABLED disabled
+25) DOTBOX dotbox
+26) DoubleVar <class 'tkinter.DoubleVar'>
+27) E e
+28) END end
+29) EW ew
+30) EXCEPTION 8
+31) EXTENDED extended
+32) Entry <class 'tkinter.Entry'>
+33) Event <class 'tkinter.Event'>
+34) EventType <enum 'EventType'>
+35) FALSE 0
+36) FIRST first
+37) FLAT flat
+38) Frame <class 'tkinter.Frame'>
+39) GROOVE groove
+40) Grid <class 'tkinter.Grid'>
+41) HIDDEN hidden
+42) HORIZONTAL horizontal
+43) INSERT insert
+44) INSIDE inside
+45) Image <class 'tkinter.Image'>
+46) IntVar <class 'tkinter.IntVar'>
+47) LAST last
+48) LEFT left
+49) Label <class 'tkinter.Label'>
+50) LabelFrame <class 'tkinter.LabelFrame'>
+51) Listbox <class 'tkinter.Listbox'>
+52) MITER miter
+53) MOVETO moveto
+54) MULTIPLE multiple
+55) Menu <class 'tkinter.Menu'>
+56) Menubutton <class 'tkinter.Menubutton'>
+57) Message <class 'tkinter.Message'>
+58) Misc <class 'tkinter.Misc'>
+59) N n
+60) NE ne
+61) NO 0
+62) NONE none
+63) NORMAL normal
+64) NS ns
+65) NSEW nsew
+66) NUMERIC numeric
+67) NW nw
+68) NoDefaultRoot <function NoDefaultRoot at 0x0000031D8AB23020>
+69) OFF 0
+70) ON 1
+71) OUTSIDE outside
+72) OptionMenu <class 'tkinter.OptionMenu'>
+73) PAGES pages
+74) PIESLICE pieslice
+75) PROJECTING projecting
+76) Pack <class 'tkinter.Pack'>
+77) PanedWindow <class 'tkinter.PanedWindow'>
+78) PhotoImage <class 'tkinter.PhotoImage'>
+79) Place <class 'tkinter.Place'>
+80) RADIOBUTTON radiobutton
+81) RAISED raised
+82) READABLE 2
+83) RIDGE ridge
+84) RIGHT right
+85) ROUND round
+86) Radiobutton <class 'tkinter.Radiobutton'>
+87) S s
+88) SCROLL scroll
+89) SE se
+90) SEL sel
+91) SEL_FIRST sel.first
+92) SEL_LAST sel.last
+93) SEPARATOR separator
+94) SINGLE single
+95) SOLID solid
+96) SUNKEN sunken
+97) SW sw
+98) Scale <class 'tkinter.Scale'>
+99) Scrollbar <class 'tkinter.Scrollbar'>
+100) Spinbox <class 'tkinter.Spinbox'>
+101) StringVar <class 'tkinter.StringVar'>
+102) TOP top
+103) TRUE 1
+104) Tcl <function Tcl at 0x0000031D8AB2C8A0>
+105) TclError <class '_tkinter.TclError'>
+106) TclVersion 8.6
+107) Text <class 'tkinter.Text'>
+108) Tk <class 'tkinter.Tk'>
+109) TkVersion 8.6
+110) Toplevel <class 'tkinter.Toplevel'>
+111) UNDERLINE underline
+112) UNITS units
+113) VERTICAL vertical
+114) Variable <class 'tkinter.Variable'>
+115) W w
+116) WORD word
+117) WRITABLE 4
+118) Widget <class 'tkinter.Widget'>
+119) Wm <class 'tkinter.Wm'>
+120) X x
+121) XView <class 'tkinter.XView'>
+122) Y y
+123) YES 1
+124) YView <class 'tkinter.YView'>
+125) _VersionInfoType <class 'tkinter._VersionInfoType'>
+126) __all__ <build-in name>
+127) __builtins__ <build-in name>
+128) __cached__ <build-in name>
+129) __doc__ <build-in name>
+130) __file__ <build-in name>
+131) __loader__ <build-in name>
+132) __name__ <build-in name>
+133) __package__ <build-in name>
+134) __path__ <build-in name>
+135) __spec__ <build-in name>
+136) _checkbutton_count 0
+137) _cnfmerge <function _cnfmerge at 0x0000031D8AB22DA0>
+138) _debug False
+139) _default_root None
+140) _destroy_temp_root <function _destroy_temp_root at 0x0000031D8AB23200>
+141) _exit <function _exit at 0x0000031D8AB23340>
+142) _flatten <built-in function _flatten>
+143) _get_default_root <function _get_default_root at 0x0000031D8AB230C0>
+144) _get_temp_root <function _get_temp_root at 0x0000031D8AB23160>
+145) _join <function _join at 0x0000031D8AB22B20>
+146) _magic_re re.compile('([\\\\{}])')
+147) _parse_version <function _parse_version at 0x0000031D8AB215E0>
+148) _print_command <function _print_command at 0x0000031D8AB2C800>
+149) _setit <class 'tkinter._setit'>
+150) _space_re re.compile('([\\s])', re.ASCII)
+151) _splitdict <function _splitdict at 0x0000031D8AB22D00>
+152) _stringify <function _stringify at 0x0000031D8AB22EE0>
+153) _support_default_root True
+154) _test <function _test at 0x0000031D8AD05640>
+155) _tkerror <function _tkerror at 0x0000031D8AB232A0>
+156) _tkinter <module '_tkinter' from 'C:\\DevPrograms\\Python\\Python313\\DLLs\\_tkinter.cp313t-win_amd64.pyd'>
+157) _varnum 0
+158) collections <module 'collections' from 'C:\\DevPrograms\\Python\\Python313\\Lib\\collections\\__init__.py'>
+159) constants <module 'tkinter.constants' from 'C:\\DevPrograms\\Python\\Python313\\Lib\\tkinter\\constants.py'>
+160) enum <module 'enum' from 'C:\\DevPrograms\\Python\\Python313\\Lib\\enum.py'>
+161) getboolean <function getboolean at 0x0000031D8AB24560>
+162) getdouble <class 'float'>
+163) getint <class 'int'>
+164) image_names <function image_names at 0x0000031D8AD03CA0>
+165) image_types <function image_types at 0x0000031D8AD03D40>
+166) mainloop <function mainloop at 0x0000031D8AB244C0>
+167) re <module 're' from 'C:\\DevPrograms\\Python\\Python313\\Lib\\re\\__init__.py'>
+168) sys <module 'sys' (built-in)>
+169) types <module 'types' from 'C:\\DevPrograms\\Python\\Python313\\Lib\\types.py'>
+170) wantobjects 1
+------------------------------------------------------------
+tkinter has 171 names
+------------------------------------------------------------
+>>> ^Z

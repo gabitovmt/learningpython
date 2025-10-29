@@ -1,0 +1,71 @@
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script09> py -3 reloadall.py
+reloading reloadall
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading types
+
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script09> py -2 reloadall.py
+reloading reloadall
+reloading sys
+reloading types
+
+
+Использую из командной строки. Из .venv не заработал import tkinter
+
+D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script09>py
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from reloadall import reload_all
+>>> import os, tkinter
+>>> reload_all(os)
+reloading os
+reloading abc
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading stat
+reloading ntpath
+reloading genericpath
+>>> reload_all(tkinter)
+reloading tkinter
+reloading collections
+reloading collections.abc
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading enum
+reloading builtins
+reloading types
+reloading _tkinter
+reloading tkinter.constants
+reloading re
+reloading re._constants
+reloading re._parser
+reloading re._casefix
+reloading re._compiler
+reloading _sre
+reloading functools
+reloading copyreg
+
+Сравнивается нормальная и транзитивная перезагрузка
+(.venv) PS D:\Projects\PycharmProjects\learningpython\src\learning_python\ch25\script09> py
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import a
+>>> a.X, a.b.Y, a.b.c.Z
+(1, 2, 3)
+Не останавливая Python, изменяем присваиваемые значения во всех модулях a, b, c
+>>> from importlib import reload
+>>> reload(a)
+<module 'a' from 'D:\\Projects\\PycharmProjects\\learningpython\\src\\learning_python\\ch25\\script09\\a.py'>
+>>> a.X, a.b.Y, a.b.c.Z
+(11, 2, 3)
+>>> from reloadall import reload_all
+>>> reload_all(a)
+reloading a
+reloading b
+reloading c
+>>> a.X, a.b.Y, a.b.c.Z
+(11, 22, 33)
+>>> ^Z

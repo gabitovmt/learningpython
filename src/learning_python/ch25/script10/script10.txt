@@ -1,0 +1,157 @@
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> .\reloadall.py
+reloading reloadall
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading types
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> .\reloadall2.py
+reloading reloadall2
+reloading types
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> .\reloadall3.py
+reloading reloadall3
+reloading types
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> .\reloadall.py tkinter
+reloading tkinter
+reloading collections
+reloading collections.abc
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading enum
+reloading builtins
+reloading types
+reloading _tkinter
+reloading tkinter.constants
+reloading re
+reloading re._constants
+reloading re._casefix
+reloading re._compiler
+reloading _sre
+reloading functools
+reloading copyreg
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> .\reloadall2.py tkinter
+reloading tkinter
+reloading collections
+reloading collections.abc
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading enum
+reloading builtins
+reloading types
+reloading _tkinter
+reloading tkinter.constants
+reloading re
+reloading re._constants
+reloading re._parser
+reloading re._casefix
+reloading re._compiler
+reloading _sre
+reloading functools
+reloading copyreg
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> .\reloadall3.py tkinter
+reloading tkinter
+reloading re
+reloading copyreg
+reloading _sre
+reloading functools
+reloading re._compiler
+reloading re._parser
+reloading re._casefix
+reloading re._parser
+reloading re._constants
+reloading enum
+reloading builtins
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading tkinter.constants
+reloading _tkinter
+reloading types
+reloading sys
+reloading enum
+reloading collections
+reloading collections.abc
+reloading collections.abc
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> py -2 reloadall.py
+reloading reloadall
+reloading sys
+reloading types
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> py -2 reloadall.py Tkinter
+Traceback (most recent call last):
+  File "reloadall.py", line 54, in <module>
+    tester(reload_all, 'reloadall')  # Тест: перезагрузка самого себя?
+  File "reloadall.py", line 49, in tester
+    module = importlib.import_module(modname)  # Импортировать по строке с именем
+  File "C:\devprograms\python\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named Tkinter
+Модуль для Python 2.7 не был установлен на компьютер.
+
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script10> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import reloadall, reloadall2, reloadall3
+>>> import tkinter
+>>> reloadall.reload_all(tkinter)   # Нормальное использование
+reloading tkinter
+reloading collections
+reloading collections.abc
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading enum
+reloading builtins
+reloading types
+reloading _tkinter
+reloading tkinter.constants
+reloading re
+reloading re._constants
+reloading re._parser
+reloading re._casefix
+reloading re._compiler
+reloading _sre
+reloading functools
+reloading copyreg
+>>> reloadall.tester(reloadall2.reload_all, 'tkinter')  # Функция тестирования
+reloading tkinter
+reloading collections
+reloading collections.abc
+reloading sys
+reloading sys.monitoring
+FAILED: <module 'sys.monitoring'>
+reloading enum
+reloading builtins
+reloading types
+reloading _tkinter
+reloading tkinter.constants
+reloading re
+reloading re._constants
+reloading re._parser
+reloading re._casefix
+reloading re._compiler
+reloading _sre
+reloading functools
+reloading copyreg
+>>> reloadall.tester(reloadall3.reload_all, 'reloadall3')   # Имитация кода самотестирования
+reloading reloadall3
+reloading types
+
+# Порядок перезагрузки модулей может отличаться. Но перезагружаются одни и те же модули
+>>> import os
+>>> res1 = os.popen('reloadall.py tkinter').readlines()
+>>> res2 = os.popen('reloadall2.py tkinter').readlines()
+>>> res3 = os.popen('reloadall3.py tkinter').readlines()
+>>> res1[:3]
+['reloading tkinter\n', 'reloading collections\n', 'reloading collections.abc\n']
+>>> res1 == res2, res2 == res3
+(True, False)
+>>> set(res1) == set(res2), set(res2) == set(res3)
+(True, True)

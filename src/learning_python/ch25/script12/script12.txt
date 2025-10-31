@@ -1,0 +1,15 @@
+(venv) PS C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script12> py -3
+Python 3.13.7 experimental free-threading build (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:20:35) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import recur1.py
+Traceback (most recent call last):
+  File "<python-input-0>", line 1, in <module>
+    import recur1.py
+  File "C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script12\recur1.py", line 3, in <module>
+    import recur2  # Запустить модуль recur2 прямо сейчас, когда он не существует
+    ^^^^^^^^^^^^^
+  File "C:\Projects\MyProjects\learningpython\src\learning_python\ch25\script12\recur2.py", line 3, in <module>
+    from recur1 import Y    # Ошибка: имя Y пока не существует
+    ^^^^^^^^^^^^^^^^^^^^
+ImportError: cannot import name 'Y' from 'recur1' (consider renaming 'C:\\Projects\\MyProjects\\learningpython\\src\\learning_python\\ch25\\script12\\recur1.py' if it has the same name as a library you intended to import)
+>>>

@@ -11,3 +11,9 @@ if __name__ == '__main__':
 
     print(bob.name, bob.pay)
     print(sue.name, sue.pay)
+
+    # Извлечение фамилии из объекта
+    print(bob.name.split()[-1])
+    # Предоставление этому объекту повышения
+    sue.pay *= 1.10
+    print('{:,.2f}'.format(sue.pay))

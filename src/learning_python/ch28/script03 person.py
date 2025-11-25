@@ -21,10 +21,8 @@ class Person:
 if __name__ == '__main__':
     bob = Person('Bob Smith')
     sue = Person('Sue Jones', job='dev', pay=100_000)
-
     print(bob)
     print(sue)
-
     print(bob.lastName(), sue.lastName())
     sue.giveRaise(.10)
     print(sue)

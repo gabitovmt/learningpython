@@ -39,3 +39,11 @@ if __name__ == '__main__':
     print(tom.lastName())
     # Выполняется унаследованный __repr__
     print(tom)
+
+    print('--All three--')
+    # Обработать объекты обобщённым образом
+    for obj in (bob, sue, tom):
+        # Выполнить метод giveRaise этого объекта
+        obj.giveRaise(.10)
+        # Выполнить общий метод __repr__
+        print(obj)
